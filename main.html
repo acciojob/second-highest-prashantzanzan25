@@ -8,9 +8,24 @@
 
 <body>	
 	<script>
-		function secondHighest(arr) {
+		## function secondHighest(arr) {
 			//Write your code here
-			
+			arr.sort((a, b) => b - a);
+
+			// Initialize secondHighest with -Infinity
+			let secondHighest = -Infinity;
+
+			// Loop through the array
+			for (let i = 0; i < arr.length; i++) {
+				// If the current element is not equal to the first element (highest)
+				if (arr[i] !== arr[0]) {
+					// Update secondHighest with the current element
+					secondHighest = arr[i];
+					break;
+				}
+			}
+			// Return secondHighest
+			return secondHighest;
 		}
 
 		function Main() {
